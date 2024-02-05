@@ -9,32 +9,32 @@ def redirect_to_haar():
 
 @app.route('/haar')
 def haar():
-    with open("app/haar.py", "r") as code_file:
+    with open("app/static/haar.py", "r") as code_file:
         code_snippet = code_file.read()
     
-    return render_template(r'haar.html', code=code_snippet, image='Haar Theoretical Results')
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='Haar Theoretical Results.png', name='Haar')
 
 @app.route("/twodesign")
 def twoDesign():
-    with open("app/two_design.py", "r") as code_file:
+    with open("app/static/two_design.py", "r") as code_file:
         code_snippet = code_file.read()
     
-    return render_template(r'twodesign.html', code=code_snippet, image='Two-Design Theoretical Results.png')
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='Two-Design Theoretical Results.png', name="Two Design")
 
 @app.route("/clifford")
 def clifford():
-    with open("app/clifford.py", "r") as code_file:
+    with open("app/static/clifford.py", "r") as code_file:
         code_snippet = code_file.read()
     
-    return render_template(r'clifford.html', code=code_snippet, image='Two-Design Theoretical Results.png')
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='Two-Design Theoretical Results.png', name='Clifford')
     
 
 @app.route("/pooledpauli")
 def pooledpauli():
-    with open("app/Pooled Pauli.py", "r") as code_file:
+    with open("app/static/Pooled Pauli.py", "r") as code_file:
         code_snippet = code_file.read()
     
-    return render_template(r'pooledpauli.html', code=code_snippet, image='Two-Design Theoretical Results.png')
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='app/static/Pooled Pauli.png', name='Pooled Pauli')
 
 
 if __name__ == "__main__":
