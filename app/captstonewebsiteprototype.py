@@ -34,7 +34,7 @@ def pooledpauli():
     with open("app/static/Pooled Pauli.py", "r") as code_file:
         code_snippet = code_file.read()
     
-    return render_template(r'algorithmTemplate.html', code=code_snippet, image='app/static/Pooled Pauli.png', name='Pooled Pauli')
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='Pooled Pauli.png', name='Pooled Pauli')
 
 
 if __name__ == "__main__":
