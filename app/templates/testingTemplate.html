@@ -166,7 +166,13 @@
         <div class="title">
             {{name}} Theoretical Simulation in Python
         </div>
-        <div class="code-container">
+        <iframe frameborder="0"
+                onresize="noresize"
+                style='background: transparent; width: 100%; height:1000%;'
+                src="{{ url_for('qdrift')}}">
+
+        </iframe>
+        <!--div class="code-container">
             <pre class="code highlight">{{ code }}</pre>
         </div>
         <div class="button-container">
@@ -175,7 +181,7 @@
         <div class="paragraph" id="hidden-paragraph">
             <p>Theoretical results retrived from our resarch and development of the {{name}} model and applying it to the base random adaptive algorithm.</p>
             <img src="{{ url_for('static', filename=image) }}" alt="Image" width="auto" , height="auto">
-        </div>
+        </div-->
 
     </div>
 

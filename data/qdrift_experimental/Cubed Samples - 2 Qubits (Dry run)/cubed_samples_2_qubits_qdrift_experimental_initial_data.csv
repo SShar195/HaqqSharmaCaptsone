@@ -1,0 +1,4 @@
+gradient_sampling_type,initial_state,problem_hamiltonian,step_size,num_qubits,qdrift_reps,max_iterations,optimization_level,ibm_backend_str,dry_run
+Cubed Samples,"Statevector([0.5+0.j, 0.5+0.j, 0.5+0.j, 0.5+0.j],
+            dims=(2, 2))","SparsePauliOp(['ZZ'],
+              coeffs=[1.+0.j])",0.25,2,1,10,0,ibmq_mumbai,True
