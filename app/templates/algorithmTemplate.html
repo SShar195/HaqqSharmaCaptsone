@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Code and Image Display</title>
     <style>
@@ -19,6 +20,9 @@
             margin-top: 20px;
             font-size: 24px;
             margin-bottom: 20px;
+            font:small-caps;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
         }
 
         .code-container {
@@ -35,7 +39,7 @@
         .button-container {
             width: 100%;
             text-align: left;
-            margin-right: -450px; 
+            margin-right: -400px; 
 
         }
 
@@ -138,19 +142,23 @@
     <!-- Include the Pygments CSS stylesheet for code highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pygments/2.9.0/pygments.css">
 </head>
-<div class="navbar">
-    <a href="/about">About our project</a>
-    <div class="dropdown">
-        <button class="dropbtn">Theoretical Simulation
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class ="dropdown-content">        
-            <a href="/haar">Haar</a>
-            <a href="/twodesign">Two Design</a>
-            <a href="/clifford">Clifford</a>
-            <a href="/pooledpauli">Pooled Pauli</a>
-            <a href="/pooledpauli
+
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Theoretical Simulation
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/haar">Haar</a>
+                <a href="/twodesign">Two Design</a>
+                <a href="/clifford">Clifford</a>
+                <a href="/pooledpauli">Pooled Pauli</a>
+                <a href="/pooledpaulipreselect"> Pooled Pauli With Pre Selection</a>
+            </div>
         </div>
+        <a href="https://github.com/SShar195/Resources-For-Learning-Quantum" target="_blank">Resources</a>
+
     </div>
 </div>
 <body>
@@ -165,8 +173,8 @@
             <button class="button" onclick="toggleParagraph()">Run and display theoretical results</button>
         </div>
         <div class="paragraph" id="hidden-paragraph">
-            <p>Theoretical results retrived from our resarch and development of Haar model and applying it to the base random adaptive algorithm.</p>
-            <img src="{{ url_for('static', filename=image) }}" alt="Image" width="auto", height="auto">
+            <p>Theoretical results retrived from our resarch and development of the {{name}} model and applying it to the base random adaptive algorithm.</p>
+            <img src="{{ url_for('static', filename=image) }}" alt="Image" width="auto" , height="auto">
         </div>
 
     </div>
@@ -182,4 +190,5 @@
         }
     </script>
 </body>
+
 </html>

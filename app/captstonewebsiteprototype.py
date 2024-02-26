@@ -40,6 +40,12 @@ def pooledpauli():
     
     return render_template(r'algorithmTemplate.html', code=code_snippet, image='Pooled Pauli.png', name='Pooled Pauli')
 
+@app.route("/pooledpaulipreselect")
+def pooledpaulipreselect():
+    with open("app/static/Pooled Pauli Pre Selection.py", "r") as code_file:
+        code_snippet = code_file.read()
+    
+    return render_template(r'algorithmTemplate.html', code=code_snippet, image='Pooled Pauli Pre-Selection.png', name='Pooled Pauli')
 
 if __name__ == "__main__":
     app.run(debug=True)
