@@ -27,6 +27,10 @@ def clifford():
         code_snippet = code_file.read()
     
     return render_template(r'algorithmTemplate.html', code=code_snippet, image='Two-Design Theoretical Results.png', name='Clifford')
+
+@app.route("/about")
+def about():
+    return render_template(r'aboutTemplate.HTML')
     
 
 @app.route("/pooledpauli")
